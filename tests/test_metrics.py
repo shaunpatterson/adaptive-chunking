@@ -53,7 +53,6 @@ class TestSizeCompliance:
         assert score == 1.0
 
 
-<<<<<<< HEAD
 class TestFilteredMissingRefError:
     # "Alice went home. " is 17 chars, so chunk boundary lands at index 17.
     full_text = "Alice went home. She slept."
@@ -80,7 +79,8 @@ class TestFilteredMissingRefError:
     def test_no_pairs_returns_none(self):
         chunks = ["Alice went home. ", "She slept."]
         assert compute_filtered_missing_ref_error(self.full_text, chunks, []) is None
-=======
+
+
 class _FakeTok:
     def __init__(self, text, ws):
         self.text = text
@@ -132,4 +132,3 @@ class TestWordTokenizerCaching:
 
         # without return_clean it returns just the with-whitespace list
         assert solver._tokenize_by_word("a b") == ["a ", "b"]
->>>>>>> fix/coref-load-spacy-once
